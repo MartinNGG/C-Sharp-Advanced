@@ -1,8 +1,0 @@
-iceSize = source.Length / parts;
-            long leftOver = source.Length - sliceSize * parts;
-            for (int i = 0; i < parts; i++)
-            {
-                using (var destination = new FileStream(string.Format("../../Part-{0}.txt", i), FileMode.Create))
-                {
-                    sliceSize = (i < parts - 1) ? sliceSize : sliceSize + leftOver;
-      
