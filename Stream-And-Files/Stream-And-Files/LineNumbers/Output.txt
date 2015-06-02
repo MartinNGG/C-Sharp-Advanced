@@ -1,0 +1,33 @@
+Line 1: using System.Collections.Generic;
+Line 2: using System.IO;
+Line 3: using System.Linq;
+Line 4: using System.Text;
+Line 5: using System.Threading.Tasks;
+Line 6: 
+Line 7: namespace LineNumbers
+Line 8: {
+Line 9:     class LineNumbers
+Line 10:     {
+Line 11:         static void Main(string[] args)
+Line 12:         {
+Line 13:             StreamReader input = new StreamReader("../../LineNumbers.cs");
+Line 14:             StreamWriter output = new StreamWriter("../../Output.txt");
+Line 15: 
+Line 16:             using (input)
+Line 17:             {
+Line 18:                 using (output)
+Line 19:                 {
+Line 20:                     string line = input.ReadLine();
+Line 21:                     int lineNumber = 0;
+Line 22:                     while ((line = input.ReadLine()) != null)
+Line 23:                     {
+Line 24:                         lineNumber++;
+Line 25:                         output.WriteLine("Line {0}: {1}", lineNumber, line);
+Line 26:                     }
+Line 27: 
+Line 28:                 }
+Line 29:             }
+Line 30: 
+Line 31:         }
+Line 32:     }
+Line 33: }
